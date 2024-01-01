@@ -137,5 +137,14 @@ body::before {
     font-weight: 100;
     font-style: normal;
 }
+.card1{
+    background-color: transparent;
+}
+.back1{
+    background-color: #F69074;
+
+}
+
+
 
 
