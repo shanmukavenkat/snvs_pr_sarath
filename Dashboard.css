@@ -5,7 +5,7 @@ p{
     color:black;
     font-size:20px;
 }
-/* Glassmorphism card effect */
+/* Glass morphism card effect */
 .card {
 
 
@@ -142,6 +142,7 @@ body::before {
 }
 .back1{
     background-color: #F69074;
+    margin-left:10px;
 
 }
 
