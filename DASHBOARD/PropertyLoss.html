@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>New complaint</title>
+    <link rel="icon" type="image/x-icon" href="VVIT_logo.svg">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="PropertyLoss.css">
+</head>
+<body>
+<!---nav bar-->
+<nav class="navbar bg-transparent navbar-expand-lg navbar-light bg-light">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="#"><img src="VVIT_logo.svg" alt="logo" width="50%"> </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item">
+                    <a class="nav-link back1" href="#">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link back1" href="#">Login</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link back1" href="#">SignUp</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link back1" href="#">FAQ</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+<!--navbar_end-->
+<!--start of slide bar-->
+<div class="container-fluid">
+    <div class="row ">
+        <div class=" bg-transparent col-sm-auto bg-light sticky-top">
+            <div class="d-flex flex-sm-column flex-row flex-nowrap bg-light align-items-center sticky-top">
+                <ul class="nav nav-pills nav-flush flex-sm-column flex-row flex-nowrap mb-auto mx-auto text-center align-items-center">
+                    <li class="nav-item">
+                        <a href="#" class="nav-link py-3 px-2" title="DASHBOARD" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-original-title="Home">
+                            <img src="Dashboard_svg.svg" alt="Dashboard" width="30" height="24">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="nav-link py-3 px-2" title="PROPERTY_LOSS" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-original-title="Dashboard">
+                            <img src="Property.svg" alt="Property" width="38" height="38">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="nav-link py-3 px-2" title="MY_COMPLAINT" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-original-title="MyComplaints">
+                            <img src="checklist.svg" alt="My_complaints" width="38" height="38">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="nav-link py-3 px-2" title="CONTACT_US" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-original-title="Contact">
+                            <img src="contact_svg.svg" alt="contactus" width="38" height="38">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="nav-link py-3 px-2" title="COMPLAINT_REGISTRATION" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-original-title="AddComplaint">
+                            <img src="add-file.svg" alt="add_complaint" width="38" height="38">
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <!--end of slide bar-->
+        <div class="col-sm p-3 min-vh-100">
+            <div class="row">
+                <h4>PropertyLost</h4>
+                <div class="d-flex flex-row justify-content-between">
+                <div class=" mb-4 col-12 col-sm-12 col-md-12 col-lg-8 col-xl-8 order-1">
+
+                    <div class=" m-5 bg-transparent">
+                        <form class="card shadow-lg">
+                            <label for="name">Name:
+                            <input type="text" id="name">
+                            </label>
+                            <label for="Subject">Subject:
+                            <input type="text" id="Subject">
+                            </label>
+
+                            <label for="description">Description:
+                            <input type="text" id="description">
+                            </label>
+
+                            <label for="email">Email:
+                            <input type="email" id="email" required>
+                            </label>
+
+                            <label for="number">Number:
+                            <input type="number" id="number">
+                            </label>
+
+
+                            <label for="imagefile" class="label">Please upload the front side of image,and back side of image and side of the image
+                            <input type="file"  id="imagefile" multiple="multiple" accept="image/jpeg,image/jpg,image/png">
+                                <output id="result"> </output>
+                            </label>
+                            <div class="d-flex mb-3 justify-content-center">
+                                <button type="submit" class="btn btn-primary">Submit</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div class="d-none d-sm-none d-md-block col-sm-4 col-md-4 col-lg-4 col-xl-4 order-2">
+                    <div class="">
+                        <img src="lost.svg" alt="PropertyLoss" width="400" height="400">
+                    </div>
+                </div>
+                </div>
+                    <!---adding the flex-->
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    document.querySelector("#imagefile").addEventListener("change", (e) => {
+        if (window.File && window.FileReader && window.FileList && window.Blob) {
+            const files = e.target.files;
+            const output = document.querySelector("#result");
+            for (let i = 0; i < files.length; i++) {
+                if (!files[i].type.match("image")) continue;
+                const picReader = new FileReader();
+                picReader.addEventListener("load", function (event) {
+                    const picFile = event.target;
+                    const div = document.createElement("div");
+                    div.innerHTML = `<img class="thumbnails" src="${picFile.result}" title="${picFile.name}"/>`;
+                    output.append(div);
+                });
+                picReader.readAsDataURL(files[i]);
+            }
+        } else {
+            alert("The File are not supported in this browser.");
+        }
+    });
+
+</script>
+</body>
+</html>
