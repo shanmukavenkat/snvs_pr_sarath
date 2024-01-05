@@ -1,0 +1,25 @@
+input{
+    border: none;
+    inline:none;
+    outline-color: #F6FBFF;
+}
+label{
+    border-radius:20px;
+    border: 1px solid #ccc;
+    outline-color: #ffecd2;
+
+}
+.card{
+    width: auto;
+}
+h1{
+    font-family: "Lucida Bright", Georgia, serif;
+    font-size: 40px;
+    font-weight: bold;
+}
+.card1{
+    width: 600px;
+}
+body {
+    overflow-x: hidden;
+}
