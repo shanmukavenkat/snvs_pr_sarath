@@ -37,14 +37,14 @@
 </nav>
 
 <div class="container ">
-    <div class="row container_margin">
+    <div class="row container_margin ">
         <div class="d-flex flex-row justify-content-center ">
             <div class="d-none d-sm-none d-md-none d-lg-block d-xl-block order-2">
                 <img src="Login-pan.svg" alt="reload" class=" pt-3 user_img">
             </div>
             <div class="d-none d-sm-none d-md-none d-xl-block d-lg-block col-md-6 col-xl-6 col-xl-6 pt-3 order-1">
-                <div class="card ml-5 shadow-lg w-75 h-auto m-3">
-                    <h4 class="pt-3">Forgot Password</h4>
+                <div class="card ml-5 shadow-lg w-60 h-auto m-3">
+                    <h4 class="pt-3">Login</h4>
                     <p>Please Enter Valid Email address</p>
 
                     <form>
@@ -54,12 +54,16 @@
                                 <label for="Input1">Email address</label>
                             </div>
                             <div class="form-floating">
-                                <input type="password" class="form-control input_class" id="Password1" placeholder="Password">
-                                <label for="Password1">Password</label>
+                                <input type="password" class="form-control input_class " id="Password1" placeholder="">
+                                <label for="Password1" >Password</label>
                             </div>
-
-                            <button type="submit" class="btn mt-3" data-mdb-ripple-init> Login</button>
+                            <div class="mt-1 ">
+                                <a href="ForgotPassword.html">Forgot Password?</a>
+                                <p>If you are new <a href="SignUp.html">Sign Up</a></p>
+                            </div>
+                            <button type="submit" class="btn mt-3 mb-2" data-mdb-ripple-init> Login</button>
                         </div>
+
 
                     </form>
 
@@ -89,10 +93,13 @@
                                     <label for="Password">Password</label>
                                 </div>
                             </div>
-
+                            <div class="mt-1">
+                                <a href="ForgotPassword.html">Forgot Password?</a>
+                                <p>If you are new <a href="SignUp.html">Sign Up</a></p>
+                            </div>
                         </form>
-
                         <button  type="submit" class="btn btn-primary mt-2"> Login</button>
+
 
 
 
