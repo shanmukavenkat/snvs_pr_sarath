@@ -145,6 +145,13 @@ body::before {
     background-image: linear-gradient(315deg, #F69074 0%, #f69074 74%);
     margin: 10px;
 }
+input{
+    border: none;
+    outline: none;
+}
+i{
+    margin-left: 5px;
+}
 
 
 

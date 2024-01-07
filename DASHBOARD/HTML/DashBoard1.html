@@ -37,31 +37,27 @@
 </nav>
 <!---nav bar end-->
 <div class="container-fluid">
-    <div class="row">
+    <div class="row" >
         <div class=" bg-transparent  col-sm-auto bg-light sticky-top">
             <div class="d-flex flex-sm-column flex-row flex-nowrap bg-light align-items-center sticky-top">
 
                 <ul class="  bg-transparent nav nav-pills nav-flush flex-sm-column flex-row flex-nowrap mb-auto mx-auto text-center align-items-center">
                     <li class="nav-item">
-                        <a href="#" class="nav-link py-3 px-2" title="DASHBOARD" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-original-title="Dashboard">
+                        <a href="#" class="nav-link py-3 px-2" title="DASHBOARD" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-original-title="Home">
                             <img src="Dashboard_svg.svg" alt="Dashboard" width="30" height="24">
                         </a>
                     </li>
                     <li>
-                        <a href="PropertyLoss.html" class="nav-link py-3 px-2" title="PROPERTY_LOST" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-original-title="Property">
+                        <a href="#" class="nav-link py-3 px-2" title="PROPERTY_LOSS" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-original-title="Dashboard">
                             <img src="Property.svg" alt="Property" width="38" height="38">
                         </a>
                     </li>
                     <li>
-                        <a href="" class="nav-link py-3 px-2" title="MY_COMPLAINT" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-original-title="MyComplaints">
+                        <a href="#" class="nav-link py-3 px-2" title="MY_COMPLAINT" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-original-title="MyComplaints">
                            <img src="checklist.svg" alt="My_complaints" width="38" height="38">
                         </a>
                     </li>
-                    <li>
-                        <a href="contact_us.html" class="nav-link py-3 px-2" title="CONTACT_US" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-original-title="Contact">
-                            <img src="contact_svg.svg" alt="contactus" width="38" height="38">
-                        </a>
-                    </li>
+
                     <li>
                         <a href="#" class="nav-link py-3 px-2" title="COMPLAINT_REGISTRATION" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-original-title="AddComplaint">
                             <img src="add-file.svg" alt="add_complaint" width="38" height="38">
@@ -81,8 +77,8 @@
             <div class="container-fluid">
             <div class="row bg-transparent ">
             <div class=" bg-transparent d-flex flex-row justify-content-between">
-            <div class="card bg-transparent col-lg-8  ">
-                <div class="card bg-transparent d-flex flex-row justify-content-center">
+            <div class="card bg-transparent col-12 col-sm-12 col-md-8 col-lg-8 col-xl-8 ">
+                <div class="card bg-transparent d-flex flex-row justify-content-center ">
                 <div class="para">
                     <h4> Hi,<strong id="studentName">StudentName </strong>&#x1F44B;<br></h4>
                     <ul>
@@ -113,8 +109,10 @@
                     </ul>
                 </div>
             </div>
-                <div class=" col-lg-4 ">
+
+
                 <div class="row pb-5 m-2 w-80">
+                    <div class="d-none d-sm-none d-md-inline d-lg-block d-xl-block  col-lg-12 col-xl-12 ">
                             <div class="card bg-transparent shadow-sm ">
                                 <div class="card-header  text-center">
 
@@ -127,26 +125,22 @@
 
                                 </div>
                                 <div class="card-body">
-                                    <form class="forms">
-                                        <label for="stuName">NAME
-                                        <input type="text" id="stuName">
-                                        </label>
-                                        <label for="rollno">Roll NO
-                                        <input type="text" id="rollno">
-                                        </label>
-                                        <label for="branch">Branch
-                                        <input type="text" id="branch">
-                                        </label>
-                                        <label for="year">Year
-                                        <input type="number" id="year">
-                                        </label>
-                                        <p>No of complaints:</p>
-                                        <p>Complaints solved:</p>
-                                    </form>
-                                    <button class="btn btn-primary" onclick="saveButton()">Edit<i class="bi bi-pencil-square"></i></button>
+                                    <div class="row">
+                                        <div class="col-sm-12">
+                                            <h4 class="mb-0">StudentName</h4>
+                                            <p class="text-secondary">StudentName</p>
+                                            <p class="text-secondary">Email</p>
+                                            <p class="text-secondary">Department</p>
+                                            <p class="text-secondary">Year</p>
+                                            <p class="text-secondary">Section</p>
+                                            <p class="text-secondary">RollNo</p>
+
+                                        </div>
 
                                 </div>
-                            </div>
+                                    <button class="btn btn-primary" onclick="saveButton()">save</button>
+
+                                </div>
 
                 </div>
                 </div>
@@ -162,16 +156,16 @@
 </div>
 
 <script>
-    function saveButton(){
-       let sNam=document.getElementById("stuName").value;
-       document.getElementById("stuName").textContent="komal";
-    }
    let profile = document.getElementById("profile-image");
    let imageFile = document.getElementById("input-file");
    imageFile.onchange=function(){
        profile.src=URL.createObjectURL(imageFile.files[0]);
    }
+
+
+
 </script>
 
+</div>
 </body>
 </html>
