@@ -82,11 +82,13 @@ label{
 @-o-keyframes bg-scrolling-reverse {
     100% {
         background-position: 50px 50px;
+
     }
 }
 @keyframes bg-scrolling-reverse {
     100% {
         background-position: 50px 50px;
+
     }
 }
 @-webkit-keyframes bg-scrolling {
@@ -112,9 +114,7 @@ label{
 /* Main styles */
 body {
     margin-top: 13.5rem;
-    color: #f3f3f3;
-    font: 400 16px/1.5 exo, ubuntu, "segoe ui", helvetica, arial, sans-serif;
-    text-align: center;
+    font-family: 'Exo', sans-serif;
     /* img size is 50x50 */
     background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAIAAACRXR/mAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAIGNIUk0AAHolAACAgwAA+f8AAIDpAAB1MAAA6mAAADqYAAAXb5JfxUYAAABnSURBVHja7M5RDYAwDEXRDgmvEocnlrQS2SwUFST9uEfBGWs9c97nbGtDcquqiKhOImLs/UpuzVzWEi1atGjRokWLFi1atGjRokWLFi1atGjRokWLFi1af7Ukz8xWp8z8AAAA//8DAJ4LoEAAlL1nAAAAAElFTkSuQmCC") repeat 0 0;
     -webkit-animation: bg-scrolling-reverse 0.92s infinite;
@@ -145,14 +145,34 @@ body::before {
     background-image: linear-gradient(315deg, #F69074 0%, #f69074 74%);
     margin: 10px;
 }
-input{
+
+.card_li{
+    list-style-type: none;
+
+}
+progress {
+    width: 40%;
+    height: 20px;
     border: none;
-    outline: none;
-}
-i{
-    margin-left: 5px;
+    border-radius: 5px;
+    background-color: #ddd; /* Default background color */
 }
 
+/* Styling for the value part of the progress bar */
+progress[value] {
+    appearance: none;
+    -webkit-appearance: none;
+}
 
+/* Custom color for the value part of the progress bar */
+progress[value]::-webkit-progress-bar {
+    background-color: #ddd; /* Background color of the progress bar */
+    border-radius: 5px;
+}
 
+/* Custom color for the progress part of the progress bar */
+progress[value]::-webkit-progress-value {
+    background-color: #4CAF50; /* Your desired color */
+    border-radius: 5px;
+}
 
