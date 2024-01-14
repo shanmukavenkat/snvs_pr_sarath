@@ -150,29 +150,10 @@ body::before {
     list-style-type: none;
 
 }
-progress {
-    width: 40%;
-    height: 20px;
-    border: none;
-    border-radius: 5px;
-    background-color: #ddd; /* Default background color */
+.mark{
+    margin: 10px;
+    border-radius: 50%10%50%10%/10%50%10%50%;
 }
 
-/* Styling for the value part of the progress bar */
-progress[value] {
-    appearance: none;
-    -webkit-appearance: none;
-}
 
-/* Custom color for the value part of the progress bar */
-progress[value]::-webkit-progress-bar {
-    background-color: #ddd; /* Background color of the progress bar */
-    border-radius: 5px;
-}
-
-/* Custom color for the progress part of the progress bar */
-progress[value]::-webkit-progress-value {
-    background-color: #4CAF50; /* Your desired color */
-    border-radius: 5px;
-}
 

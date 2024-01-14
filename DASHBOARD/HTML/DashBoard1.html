@@ -94,13 +94,18 @@
                     </div>
                 </div>
 
-                <div class="card1  ">
+                <div class="card1 mt-2 ">
 
-                    <button class="btn btn-primary m-2" >Status</button>
-                    <ul class="  card_li d-flex flex-row">
-
+                    <mark class="mark btn-primary m-2" style="background-color: #0d6efd; color:#ffffff; font-weight:bold; font-family: Calibri,sans-serif" >Status</mark>
+                    <ul class="  d-flex flex-row">
                         <p>the Query by the user that he initialised</p>
-                        <progress value="50" max="100" class="m-2"></progress>
+                        <div class="progress m-2 w-50">
+                            <div class="progress-bar bg-danger " role="progressbar" style="width: 100%" aria-valuenow="100" aria-valuemin="25000" aria-valuemax="50000">Initialized</div>
+                            <div class="progress-bar bg-success " role="progressbar" style="width: 100%" aria-valuenow="100" aria-valuemin="25000" aria-valuemax="50000">Completed</div>
+                            <div class="progress-bar bg-warning " role="progressbar" style="width: 100%" aria-valuenow="100" aria-valuemin="25000" aria-valuemax="50000">Progress</div>
+                        </div>
+
+
 
                     </ul>
                 </div>
