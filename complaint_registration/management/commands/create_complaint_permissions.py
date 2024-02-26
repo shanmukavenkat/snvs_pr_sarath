@@ -20,3 +20,9 @@ class Command(BaseCommand):
             codename='modify_complaint',
             content_type=content_type
         )
+
+        Permission.objects.create(
+            name='Can View sensitive complaints',
+            codename='view_sensitive_complaint',
+            content_type=content_type
+        )
