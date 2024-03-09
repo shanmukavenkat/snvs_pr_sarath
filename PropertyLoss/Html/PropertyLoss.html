@@ -109,6 +109,32 @@
                                     <textarea class="container" name="description3" id="description1" cols="60" rows="5" placeholder="Description"></textarea>
                                 </label>
 
+
+
+                                <!-- Image Upload Section -->
+                                <p>Please upload the images of the item:</p>
+                                <div class="upload-container">
+                                    <div class="upload-box" onclick="document.getElementById('fileInput4').click()">
+                                        <p>Front image</p>
+                                        <input type="file" id="fileInput4" accept="image/*" onchange="displayImage(this, 'image4')">
+                                        <img id="image4" src="#" alt="Image 4 Preview" style="max-width: 100%; max-height: 100px; display: none;">
+                                    </div>
+
+                                    <div class="upload-box" onclick="document.getElementById('fileInput5').click()">
+                                        <p>Back image</p>
+                                        <input type="file" id="fileInput5" accept="image/*" onchange="displayImage(this, 'image5')">
+                                        <img id="image5" src="#" alt="Image 5 Preview" style="max-width: 100%; max-height: 100px; display: none;">
+                                    </div>
+
+                                    <div class="upload-box" onclick="document.getElementById('fileInput6').click()">
+                                        <p>Side image</p>
+                                        <input type="file" id="fileInput6" accept="image/*" onchange="displayImage(this, 'image6')">
+                                        <img id="image6" src="#" alt="Image 6 Preview" style="max-width: 100%; max-height: 100px; display: none;">
+                                    </div>
+                                </div>
+
+                                <!-- End Image Upload Section -->
+
                                 <label for="email1">Email:
                                     <input type="email" id="email1" required>
                                 </label>
@@ -116,6 +142,8 @@
                                 <div class="d-flex mb-3 justify-content-center">
                                     <button type="submit" class="btn btn-primary">Submit</button>
                                 </div>
+
+
                             </form>
 
 
@@ -196,6 +224,18 @@
 
         reader.onload = function (e) {
             preview.src = e.target.result;
+            preview.style.display = 'block';
+        };
+
+        reader.readAsDataURL(file);
+    }
+    function displayImage1(input, imgId1) {
+        var preview = document.getElementById(imgId1);
+        var file = input.files[0];
+        var reader = new FileReader();
+
+        reader.onload = function (f) {
+            preview.src = f.target.result;
             preview.style.display = 'block';
         };
 
