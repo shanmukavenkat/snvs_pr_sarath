@@ -67,11 +67,59 @@
         <!--end of slide bar-->
         <div class="col-sm p-3 min-vh-100">
             <div class="row">
-                <h4>PropertyLost</h4>
-                <div class="d-flex flex-row justify-content-between">
+                <div class="d-flex flex-row justify-content-evenly">
+                    <button class="btn btn-primary"  onclick="showForm('property')" >PROPERTY FOUND</button>
+                    <button class="btn btn-primary" onclick="showForm('loss')">PROPERTY LOST</button>
+                </div>
+
+                <div class="d-flex flex-row justify-content-center" >
                     <div class=" mb-4 col-12 col-sm-12 col-md-12 col-lg-8 col-xl-8 order-1">
                         <div class=" m-5 bg-transparent">
-                            <form class="card shadow-lg">
+
+                            <!--LOSS PROPERTY-->
+                            <form class="card shadow-lg form" id="lossForm">
+                                <label for="name1">Name of the item:
+                                    <input type="text" id="name1">
+                                </label>
+
+                                <label for="Subject1">Place of item Lost:
+                                    <select name="Subject1" id="Subject1">
+                                        <option value="classroom">Classroom</option>
+                                        <option value="library">Library</option>
+                                        <option value="canteen">Canteen</option>
+                                        <option value="playground">Playground</option>
+                                        <option value="Center_Block">Center_Block</option>
+                                        <option value="others">Others</option>
+                                    </select>
+                                </label>
+
+                                <label for="Block_Area">Mention the Block Area:
+                                    <select name="Block_Area" id="Block_Area">
+                                        <option value="A_Block">A-Block</option>
+                                        <option value="B_Block">B-Block</option>
+                                        <option value="C_Block">C-Block</option>
+                                        <option value="D_Block">D-Block</option>
+                                        <option value="NEW_Block">NEW Block</option>
+                                    </select>
+
+                                </label>
+
+
+                                <label for="description1">Description of the Item:
+                                    <textarea class="container" name="description3" id="description1" cols="60" rows="5" placeholder="Description"></textarea>
+                                </label>
+
+                                <label for="email1">Email:
+                                    <input type="email" id="email1" required>
+                                </label>
+
+                                <div class="d-flex mb-3 justify-content-center">
+                                    <button type="submit" class="btn btn-primary">Submit</button>
+                                </div>
+                            </form>
+
+
+                            <form class="card shadow-lg form" id="propertyForm">
                                 <label for="name">Name of the item:
                                     <input type="text" id="name">
                                 </label>
@@ -119,6 +167,15 @@
                             </form>
                         </div>
                     </div>
+
+
+                    <!--item found-->
+
+
+
+
+
+
                     <div class="d-none d-sm-none d-md-block col-sm-4 col-md-4 col-lg-4 col-xl-4 order-2">
                         <div class="">
                             <img src="lost.svg" alt="PropertyLoss" width="400" height="400">
@@ -143,6 +200,17 @@
         };
 
         reader.readAsDataURL(file);
+    }
+
+    function showForm(formName) {
+        // Hide all forms
+        var forms = document.getElementsByClassName('form');
+        for (var i = 0; i < forms.length; i++) {
+            forms[i].style.display = 'none';
+        }
+
+        // Show the selected form
+        document.getElementById(formName + 'Form').style.display = 'block';
     }
 </script>
 
