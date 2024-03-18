@@ -1,12 +1,12 @@
 from django.contrib import admin
-from .models import Complaint
+from complaint_administration.models.complaint_models import Complaint
 # Register your models here.
 
 
 @admin.register(Complaint)
 class ComplaintAdmin(admin.ModelAdmin):
-    list_display = ('complaint_title', 'complaint_date', 'complaint_message', 'complaint_time', 'type_of_complaint', 'status',
-                    'user_username')
+    list_display = ('complaint_title', 'complaint_date', 'complaint_message', 'complaint_time', 'type_of_complaint',
+                    'status', 'username', 'assigned_to', 'escalated_to')
 
-    def user_username(self, obj):
-        return obj.user.username
+    def username(self, obj):
+        return obj.user_object.user.username
