@@ -1,20 +1,32 @@
 from django.db import models
-from user_administration.models import CustomUser
+from user_administration.models import EscalationStructure
 import uuid
 from django.contrib.auth.models import Group
 from django.utils.translation import gettext as _
+from django.contrib.contenttypes.fields import GenericForeignKey
+from django.contrib.contenttypes.models import ContentType
 
 
 # Our user model
 class Complaint(models.Model):
     complaint_id = models.UUIDField(default=uuid.uuid4, editable=False, unique=True, primary_key=True)
-    user = models.ForeignKey(CustomUser, on_delete=models.CASCADE, unique=False)
+    user_type = models.ForeignKey(ContentType, on_delete=models.CASCADE)
+    user_id = models.PositiveIntegerField()
+    user_object = GenericForeignKey('user_type', 'user_id')
     complaint_date = models.DateTimeField(auto_now_add=True)
     complaint_time = models.TimeField(auto_now_add=True)
     complaint_message = models.CharField(max_length=1000, editable=True)
     type_of_complaint = models.CharField(editable=True, default='public')
     status = models.CharField(editable=True, default='pending')
     complaint_title = models.CharField(max_length=100, editable=True)
+
+    # Should be able to assign to multiple models such as Counsellor, ClassTeacher, HOD
+    content_type = models.ForeignKey(to=ContentType, on_delete=models.CASCADE)
+    object_id = models.PositiveIntegerField()
+    assigned_to = GenericForeignKey('content_type', 'object_id')
+
+    escalated_to = models.ForeignKey(to=EscalationStructure, on_delete=models.CASCADE)
+
     groups = models.ManyToManyField(
         Group,
         help_text=_('The group this complaint belongs to'),

@@ -5,7 +5,7 @@
     <title>Complaint_Registration</title>
 </head>
 <body>
-    <form action="/complaint_registration/register_complaint/" enctype="multipart/form-data" method="post">
+    <form action="/complaint_administration/register_complaint/" enctype="multipart/form-data" method="post">
         {% csrf_token %}
         {{ form }}
         <input type="submit" value="Submit">
