@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>View Complaint</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'complaint_administration/view_complaint.css' %}">
+</head>
+<body>
+    <div class="main">
+        <div class="complaintFrame">
+            <div class="complaintHeaderFrame">
+                <div class="complaintTitle">
+                    <h2>{{complaint.complaint_title}}</h2>
+                </div>
+                <div class="complaintDateTimeFrame">
+                    <h3>{{complaint.complaint_date}}</h3>
+                    <h3>{{complaint.complaint_time}}</h3>
+                </div>
+            </div>
+            <div class="complaintContentFrame">
+                <p>{{complaint.complaint_message}}</p>
+            </div>
+            <div class="complaintFooterFrame">
+                <select name="complaint_status" id="complaintStatus" aria-label="complaintStatus">
+                    <option value="Pending">Pending</option>
+                    <option value="Resolved">Resolved</option>
+                    <option value="Suspended">Suspended</option>
+                    <option value="Dismissed">Dismissed</option>
+                </select>
+                <form action="/complaint_administration/escalate_complaint/{{complaint.complaint_id}}/" method="post">
+                    {% csrf_token %}
+                    <button type="submit">escalate_complaint</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

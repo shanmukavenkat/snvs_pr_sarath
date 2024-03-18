@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ViewComplaints</title>
+    {% load static %}
+  <link rel="stylesheet" href="{% static 'complaint_administration/view_complaints.css' %}" type="text/css">
+</head>
+<body>
+  <div class="main">
+    <div class="complaintsFrame">
+        {% for complaint in complaints %}
+            <div class="complaintCard">
+                <div class="complaintCardHeader">
+                    <h4><strong>{{ complaint.complaint_title }}</strong></h4>
+                <div class="pubDate">
+                    <em>{{ complaint.complaint_date }}</em>
+                </div>
+                </div>
+                <p>{{ complaint.complaint_message }}</p>
+                <p>Status:  <em>{{ complaint.status}}</em></p>
+               <div class="complaintCardFooter">
+                   <button class="viewComplaint" onclick="redirectFunction('{{complaint.complaint_id}}')">view complaint</button>
+                   <p id="#ComplaintId">{{ complaint.complaint_id }}</p>
+                   <p id="#ComplaintAuthor">{{ complaint.user_object.user.username }}</p>
+               </div>
+            </div>
+        {% endfor %}
+    </div>
+      <div class="searchBar">
+          <input type="search" id="searchBar" placeholder="search complaints..." aria-label="searchBar">
+          <button type="submit" id="searchButton" onclick="search_complaints()" aria-label="searchButton">search</button>
+<!--          <div class="searchResultCardFrame">-->
+<!--          <div class="searchResultCard">-->
+<!--            <p> This is a search result card</p>-->
+<!--          </div>-->
+<!--      </div>-->
+      </div>
+
+      <div class="filterMenu">
+          This is the filter menu
+      </div>
+  </div>
+  <script>
+      function redirectFunction(complaint_id) {
+          window.location.href = `/complaint_administration/view_complaint/${complaint_id}`
+      }
+
+      function search_complaints() {
+          const query = document.getElementById('searchBar').value;
+          window.location.href = `/complaint_administration/search_complaints/?query=${query}`
+      }
+  </script>
+</body>
+</html>
