@@ -7,6 +7,16 @@
 <body>
   <form action="/user_administration/user_login/" method="POST" enctype="multipart/form-data">
     {% csrf_token %}
+         {% if messages %}
+        <ul class="messages">
+            {% for message in messages %}
+        <li>
+            {% if message.level == DEFAULT_MESSAGE_LEVELS.ERROR %}Important: {% endif %}
+            {{ message }}
+        </li>
+        {% endfor %}
+    </ul>
+{% endif %}
       {{ form }}
       <input type="submit" value="Submit">
   </form>
