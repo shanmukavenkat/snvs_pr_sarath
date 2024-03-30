@@ -22,68 +22,73 @@
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav ms-auto">
                 <li class="nav-item">
-                    <a class="nav-link back1" href="#">Home</a>
+                    <a class="nav-link back1" href="index.html">Home</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link back1" href="#">Login</a>
+                    <a class="nav-link back1" href="Login_page.html">Login</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link back1" href="#">SignUp</a>
+                    <a class="nav-link back1" href="SignUp.html">SignUp</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link back1" href="#">FAQ</a>
+                    <a class="nav-link back1" href="1Aboutus.html">About us</a>
                 </li>
             </ul>
         </div>
     </div>
 </nav>
-<div class="container">
-    <div class="row">
-        <div class="d-flex flex-row justify-content-center">
+<div class="container-fluid">
+    <div class="row ">
+        <div class="d-flex flex-row justify-content-evenly">
 
-        <div class=" col-7">
+        <div class="col-12 col-sm-12 col-md-7 col-xl-7 col-lg-7">
             <div class="card  shadow-lg">
                 <!--form tag created-->
                 <div class="d-flex flex-column justify-content-center p-3">
                 <h1 class="text-center text-3xl ">SignUp</h1>
-                <form>
+                <form c>
                     <!--Name-->
-                    <div class="form-floating mb-3 m-2 w-40">
+                    <div class="form-floating mb-3 m-2 w-70">
                         <input type="text" class="form-control input_class" id="floatingInput1" placeholder="name">
                         <label for="floatingInput1">Name</label>
                     </div>
                    <!--last name-->
-                    <div class="form-floating mb-3 m-2 w-40">
+                    <div class="form-floating mb-3 m-2 w-70">
                         <input type="text" class="form-control input_class" id="floatingInput2" placeholder="lastname">
                         <label for="floatingInput2">Last Name</label>
                     </div>
                     <!--user name-->
-                    <div class="form-floating mb-3 m-2 w-40">
+                    <div class="form-floating mb-3 m-2 w-70">
                         <input type="text" class="form-control input_class" id="floatingInput3" placeholder="username">
                         <label for="floatingInput3">User Name</label>
                     </div>
+                    <!--gender-->
+                    <div class="form-floating mb-3 m-2 w-70">
+                        <input type="text" class="form-control input_class" id="floatingInput9" placeholder="username">
+                        <label for="floatingInput9">Gender</label>
+                    </div>
                     <!--email-->
-                    <div class="form-floating mb-3 m-2 w-40">
+                    <div class="form-floating mb-3 m-2 w-70">
                         <input type="email" class="form-control input_class" id="floatingInput4" placeholder="Email">
                         <label for="floatingInput4">Email</label>
                     </div>
                  <!--RollNo-->
-                    <div class="form-floating mb-3 m-2 w-40">
+                    <div class="form-floating mb-3 m-2 w-70">
                         <input type="text" class="form-control input_class" id="floatingInput5" placeholder="RollNo">
                         <label for="floatingInput5">RollNo</label>
                     </div>
                     <!--Branch-->
-                    <div class="form-floating mb-3 m-2 w-40">
+                    <div class="form-floating mb-3 m-2 w-70">
                         <input type="text" class="form-control input_class" id="floatingInput8" placeholder="Branch">
                         <label for="floatingInput8">Branch</label>
                     </div>
                     <!--password-->
-                    <div class="form-floating mb-3 m-2 w-40">
+                    <div class="form-floating mb-3 m-2 w-70">
                         <input type="password" class="form-control input_class" id="floatingInput6" placeholder="Password">
                         <label for="floatingInput6">Password</label>
                     </div>
                     <!--confirm password-->
-                    <div class="form-floating mb-3 m-2 w-40">
+                    <div class="form-floating mb-3 m-2 w-70">
                         <input type="password" class="form-control input_class" id="floatingInput7" placeholder="Confirm Password">
                         <label for="floatingInput7">Confirm Password</label>
                     </div>
@@ -98,13 +103,13 @@
            </div>
         </div>
 
-       <div class="d-none d-sm-none d-md-block d-xl-block d-lg-block col-5 col-lg-5">
+       <div class="col-5 col-lg-5">
             <div class="card1">
-                <img src="SignUp.svg" alt="Reload" class="library"/>
+                <img src="SignUp.svg" alt="Reload" class="library d-none d-sm-none d-md-block d-xl-block d-lg-block "/>
             </div>
         </div>
         </div>
-        <!--footer-->
+
     </div>
 </div>
 <script>
