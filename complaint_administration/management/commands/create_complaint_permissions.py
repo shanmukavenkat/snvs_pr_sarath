@@ -8,20 +8,39 @@ class Command(BaseCommand):
     def handle(self, *args, **options):
         content_type = ContentType.objects.get_for_model(Complaint)
 
-        Permission.objects.create(
+        Permission.objects.get_or_create(
             name='Can create a complaint',
             codename='create_complaint',
             content_type=content_type,
         )
 
-        Permission.objects.create(
+        Permission.objects.get_or_create(
             name='Can modify complaint',
             codename='modify_complaint',
+            content_type=content_type,
+        )
+
+        Permission.objects.get_or_create(
+            name='Can View sensitive complaints',
+            codename='view_sensitive_complaint',
+            content_type=content_type,
+        )
+
+        Permission.objects.get_or_create(
+            name='Can escalate complaint',
+            codename='escalate_complaint',
+            content_type=content_type,
+        )
+
+        Permission.objects.get_or_create(
+            name='Assign complaint',
+            codename='assign_complaint',
+            content_type=content_type,
+        )
+
+        Permission.objects.get_or_create(
+            name='Dismiss Complaint',
+            codename='dismiss_complaint',
             content_type=content_type
         )
 
-        Permission.objects.create(
-            name='Can View sensitive complaints',
-            codename='view_sensitive_complaint',
-            content_type=content_type
-        )

@@ -2,26 +2,34 @@ from django.core.management.base import BaseCommand
 from django.contrib.auth.models import Group, Permission
 
 
+def create_group_with_permissions(group_name: str, permissions: list[str]):
+    group_object = Group.objects.get_or_create(name=group_name)
+    group_object = group_object[0]
+    for permission in permissions:
+        retrieved_permission = Permission.objects.get(codename=permission)
+        group_object.permissions.add(retrieved_permission)
+
+
 class Command(BaseCommand):
     def handle(self, *args, **options):
-        student = Group.objects.create(name='student')
+        permissions = [
+            'create_complaint',
+            'modify_complaint',
+            'view_sensitive_complaint',
+            'dismiss_complaint',
+            'escalate_complaint',
+            'assign_complaint',
+        ]
 
-        modify_complaint_permission = Permission.objects.get(codename='modify_complaint')
-        create_complaint_permission = Permission.objects.get(codename='create_complaint')
+        groups_with_permissions = [
+            ('Student', ('create_complaint', 'modify_complaint')),
+            ('Counsellor', ('create_complaint', 'modify_complaint', 'escalate_complaint')),
+            ('ClassTeacher', ('create_complaint', 'modify_complaint', 'escalate_complaint', 'assign_complaint')),
+            ('HeadOfDepartment', ('create_complaint', 'modify_complaint', 'escalate_complaint', 'dismiss_complaint',
+                                  'assign_complaint'))
+        ]
 
-        student.permissions.add(modify_complaint_permission)
-        student.permissions.add(create_complaint_permission)
-
-        hod = Group.objects.create(name='hod')
-
-        view_sensitive_complaint_permission = Permission.objects.get(codename='view_sensitive_complaint')
-        hod.permissions.add(view_sensitive_complaint_permission)
-
-        counsellor = Group.objects.create(name='counsellor')
-
-        modify_complaint_permission = Permission.objects.get(codename='modify_complaint')
-        create_complaint_permission = Permission.objects.get(codename='create_complaint')
-
-        counsellor.permissions.add(create_complaint_permission)
-        counsellor.permissions.add(modify_complaint_permission)
-        # Add other permissions
+        # Creating all the groups
+        for item in groups_with_permissions:
+            (group_name, (permissions)) = item
+            create_group_with_permissions(group_name, permissions)
