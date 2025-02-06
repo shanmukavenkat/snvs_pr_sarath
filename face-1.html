@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>FACE RECOGNITION</title>
+    <link rel="icon" type="image/x-icon" href="VVIT_logo.svg">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="face-1.css">
+</head>
+<body>
+<!---nav bar-->
+<nav class="navbar bg-transparent navbar-expand-lg navbar-light bg-light">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="#"><img src="VVIT_logo.svg" alt="logo" width="50%"> </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item">
+                    <a class="nav-link back1" href="#">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link back1" href="#">Login</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link back1" href="#">SignUp</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link back1" href="#">FAQ</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+<!--navbar_end-->
+<!--start of slide bar-->
+<div class="container-fluid">
+    <div class="row ">
+        <div class="bg-transparent col-sm-auto bg-light sticky-top">
+            <div class="d-flex flex-sm-column flex-row flex-nowrap bg-light align-items-center sticky-top">
+                <ul class="nav nav-pills nav-flush flex-sm-column flex-row flex-nowrap mb-auto mx-auto text-center align-items-center">
+                    <li class="nav-item">
+                        <a href="DashBoard1.html" class="nav-link py-3 px-2" title="DASHBOARD" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-original-title="Home">
+                            <img src="Dashboard_svg.svg" alt="Dashboard" width="30" height="24">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="PropertyLoss.html" class="nav-link py-3 px-2" title="PROPERTY_LOSS" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-original-title="Dashboard">
+                            <img src="Property.svg" alt="Property" width="38" height="38">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="complaint.html" class="nav-link py-3 px-2" title="MY_COMPLAINT" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-original-title="MyComplaints">
+                            <img src="checklist.svg" alt="My_complaints" width="38" height="38">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="feed.html" class="nav-link py-3 px-2" title="FEEDBACK" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-original-title="FEEDBACK">
+                            <img src="feedbackicon.svg" alt="add_complaint" width="38" height="38">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="chat-bot.html" class="nav-link py-3 px-2" title="CHAT BOT" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-original-title="AddComplaint">
+                            <img src="chat-bot.svg" alt="chat bot" width="38" height="38">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="nav-link py-3 px-2" id="face-recognition" title="FACE-RECOGNITION" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-original-title="AddComplaint">
+                            <img src="FACE.svg" alt="face" width="38" height="38">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="nav-link py-3 px-2" id="logout" title="LOGOUT" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-original-title="AddComplaint">
+                            <img src="logout.svg" alt="logout" width="38" height="38">
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <!--end of slide bar-->
+        <div class="col-sm p-3 min-vh-100">
+            <div class="row">
+                <main class="col-md-8 d-flex justify-content-center align-items-center">
+                    <div id="video-container" class="d-none text-center">
+                        <video id="webcam" autoplay playsinline class="w-100"></video>
+                        <button id="capture-button" class="btn btn-primary mt-3">Capture</button>
+                    </div>
+                </main>
+                <aside class="col-md-4">
+                    <div class="card p-3">
+                        <h3>Student Details</h3>
+                        <p>Name: John Doe</p>
+                        <p>ID: 123456</p>
+                        <p>Class: 10A</p>
+                        <!-- Add more student details as needed -->
+                    </div>
+                </aside>
+            </div>
+            <!---adding the flex-->
+        </div>
+    </div>
+</div>
+
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const video = document.getElementById('webcam');
+        const videoContainer = document.getElementById('video-container');
+        const faceRecognition = document.getElementById('face-recognition');
+        const captureButton = document.getElementById('capture-button');
+
+        faceRecognition.addEventListener('click', () => {
+            videoContainer.classList.remove('d-none');
+            startWebcam();
+        });
+
+        captureButton.addEventListener('click', () => {
+            // Add your capture logic here
+            alert('Capture button clicked!');
+        });
+
+        function startWebcam() {
+            if (navigator.mediaDevices.getUserMedia) {
+                navigator.mediaDevices.getUserMedia({ video: true })
+                    .then((stream) => {
+                        video.srcObject = stream;
+                    })
+                    .catch((error) => {
+                        console.error("Error accessing webcam: ", error);
+                    });
+            }
+        }
+    });
+</script>
+
+</body>
+</html>

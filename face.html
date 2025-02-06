@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Attendance</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="face.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Exo:100&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="d-flex">
+        <nav id="sidebar" class="bg-light p-3">
+            <div class="sidebar-header d-flex justify-content-between align-items-center">
+                <a class="navbar-brand" href="https://www.vvitguntur.com/#">
+                    <img src="VVIT_logo.svg" alt="logo" class="logo w-50"/>
+                </a>
+                <div class="burger d-md-none">
+                    <div class="line1"></div>
+                    <div class="line2"></div>
+                    <div class="line3"></div>
+                </div>
+            </div>
+            <ul class="list-unstyled components nav-links">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Login</a></li>
+                <li><a href="#">SignUp</a></li>
+                <li><a href="#">About US</a></li>
+                <li>
+                     <a href="#" id="video-icon" class="d-flex align-items-center">
+                         <img src="{% static 'images/video-call-webcam-svgrepo-com (2).svg' %}" alt="Video Icon" class="icon">
+                        <span class="ml-2">Open Camera</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+        <div class="container-fluid">
+            <div class="row">
+                <main class="col-md-8 d-flex justify-content-center align-items-center">
+                    <div id="video-container" class="d-none text-center">
+                        <video id="webcam" autoplay playsinline class="w-100"></video>
+                        <button id="capture-button" class="btn btn-primary mt-3">Capture</button>
+                    </div>
+                </main>
+                <aside class="col-md-4">
+                    <div class="card p-3">
+                        <h3>Student Details</h3>
+                        <p>Name: John Doe</p>
+                        <p>ID: 123456</p>
+                        <p>Class: 10A</p>
+                        <!-- Add more student details as needed -->
+                    </div>
+                </aside>
+            </div>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="face.js"></script>
+    <script>
+        function navSlide() {
+            const burger = document.querySelector(".burger");
+            const sidebar = document.querySelector("#sidebar");
+            const navLinks = document.querySelectorAll(".nav-links li");
+
+            burger.addEventListener("click", () => {
+                //Toggle Nav
+                sidebar.classList.toggle("nav-active");
+
+                //Animate Links
+                navLinks.forEach((link, index) => {
+                    if (link.style.animation) {
+                        link.style.animation = "";
+                    } else {
+                        link.style.animation = `navLinkFade 0.5s ease forwards ${index / 7 + 0.5}s`;
+                    }
+                });
+                //Burger Animation
+                burger.classList.toggle("toggle");
+            });
+        }
+
+        navSlide();
+
+        document.addEventListener('DOMContentLoaded', () => {
+            const video = document.getElementById('webcam');
+            const videoContainer = document.getElementById('video-container');
+            const videoIcon = document.getElementById('video-icon');
+            const captureButton = document.getElementById('capture-button');
+
+            videoIcon.addEventListener('click', () => {
+                videoContainer.classList.remove('d-none');
+                startWebcam();
+            });
+
+            captureButton.addEventListener('click', () => {
+                // Add your capture logic here
+                alert('Capture button clicked!');
+            });
+
+            function startWebcam() {
+                if (navigator.mediaDevices.getUserMedia) {
+                    navigator.mediaDevices.getUserMedia({ video: true })
+                        .then((stream) => {
+                            video.srcObject = stream;
+                        })
+                        .catch((error) => {
+                            console.error("Error accessing webcam: ", error);
+                        });
+                }
+            }
+        });
+    </script>
+</body>
+</html>

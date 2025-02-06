@@ -1,0 +1,171 @@
+
+.card{
+    background-color: transparent;
+}
+
+#result {
+    display: flex;
+    gap: 10px;
+    padding: 10px;
+    height: 200px; /* Set a fixed height for the container */
+    overflow: hidden; /* Hide overflow */
+}
+
+.thumbnails {
+    max-width: 100%; /* Make images responsive */
+    max-height: 100%; /* Ensure images don't exceed the height of the container */
+    height: auto; /* Maintain aspect ratio */
+}
+form{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    justify-content: center;
+}
+label {
+    margin: 10px;
+
+
+}
+input {
+    background-color: transparent;
+    border: none transparent;
+
+}
+.card{
+    background-color: #F6FBFF;
+}
+#imagefile {
+    cursor: pointer;
+    color: white;
+    padding: 10px;
+    border: none;
+    background-color: #FF725E;
+    border-radius: 5px;
+}
+
+#imagefile::file-selector-button {
+    color: white;
+    background-color: #FF725E;
+}
+input {
+    border: none;
+    outline: none; /* Remove the default focus outline (optional) */
+    width: 40%;
+}
+/*--animations--*/
+/* Animations */
+@-webkit-keyframes bg-scrolling-reverse {
+    100% {
+        background-position: 50px 50px;
+    }
+}
+@-moz-keyframes bg-scrolling-reverse {
+    100% {
+        background-position: 50px 50px;
+    }
+}
+@-o-keyframes bg-scrolling-reverse {
+    100% {
+        background-position: 50px 50px;
+    }
+}
+@keyframes bg-scrolling-reverse {
+    100% {
+        background-position: 50px 50px;
+    }
+}
+@-webkit-keyframes bg-scrolling {
+    0% {
+        background-position: 50px 50px;
+    }
+}
+@-moz-keyframes bg-scrolling {
+    0% {
+        background-position: 50px 50px;
+    }
+}
+@-o-keyframes bg-scrolling {
+    0% {
+        background-position: 50px 50px;
+    }
+}
+@keyframes bg-scrolling {
+    0% {
+        background-position: 50px 50px;
+    }
+}
+/* Main styles */
+body {
+    font-family: 'Exo', sans-serif;
+    /* img size is 50x50 */
+    background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAIAAACRXR/mAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAIGNIUk0AAHolAACAgwAA+f8AAIDpAAB1MAAA6mAAADqYAAAXb5JfxUYAAABnSURBVHja7M5RDYAwDEXRDgmvEocnlrQS2SwUFST9uEfBGWs9c97nbGtDcquqiKhOImLs/UpuzVzWEi1atGjRokWLFi1atGjRokWLFi1atGjRokWLFi1af7Ukz8xWp8z8AAAA//8DAJ4LoEAAlL1nAAAAAElFTkSuQmCC") repeat 0 0;
+    -webkit-animation: bg-scrolling-reverse 0.92s infinite;
+    /* Safari 4+ */
+    -moz-animation: bg-scrolling-reverse 0.92s infinite;
+    /* Fx 5+ */
+    -o-animation: bg-scrolling-reverse 0.92s infinite;
+    /* Opera 12+ */
+    animation: bg-scrolling-reverse 0.92s infinite;
+    /* IE 10+ */
+    -webkit-animation-timing-function: linear;
+    -moz-animation-timing-function: linear;
+    -o-animation-timing-function: linear;
+    animation-timing-function: linear;
+}
+.back1{
+    background-color: #F69074;
+    background-image: linear-gradient(315deg, #F69074 0%, #f69074 74%);
+    margin: 10px;
+}
+
+
+
+
+
+.upload-container {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+
+.upload-box {
+    border: 2px dashed #ddd;
+    padding: 20px;
+    width: 30%;
+    box-sizing: border-box;
+    cursor: pointer;
+    background-color: #fff;
+}
+
+.upload-box:hover {
+    border-color: #aaa;
+}
+
+input[type="file"] {
+    display: none;
+}
+.form{
+    display:none;
+}
+select{
+    border:none;
+    border-radius:5px;
+}
+
+select:focus{
+    outline:none;
+}
+textarea:focus{
+    outline:none;
+}
+.container {
+    width: 80%;
+    margin: 0 auto;
+}
+@media only screen and (max-width: 600px) {
+    .container {
+        width: 90%;
+    }
+}
+

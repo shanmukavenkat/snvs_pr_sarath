@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>PROPERTY LOSS</title>
+    <link rel="icon" type="image/x-icon" href="VVIT_logo.svg">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="PropertyLoss.css">
+</head>
+<body>
+<!---nav bar-->
+<nav class="navbar bg-transparent navbar-expand-lg navbar-light bg-light">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="#"><img src="VVIT_logo.svg" alt="logo" width="50%"> </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item">
+                    <a class="nav-link back1" href="#">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link back1" href="#">Login</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link back1" href="#">SignUp</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link back1" href="#">FAQ</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+<!--navbar_end-->
+<!--start of slide bar-->
+<div class="container-fluid">
+    <div class="row ">
+        <div class=" bg-transparent col-sm-auto bg-light sticky-top">
+            <div class="d-flex flex-sm-column flex-row flex-nowrap bg-light align-items-center sticky-top">
+                <ul class="nav nav-pills nav-flush flex-sm-column flex-row flex-nowrap mb-auto mx-auto text-center align-items-center">
+                    <li class="nav-item">
+                        <a href="DashBoard1.html" class="nav-link py-3 px-2" title="DASHBOARD" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-original-title="Home">
+                            <img src="Dashboard_svg.svg" alt="Dashboard" width="30" height="24">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="PropertyLoss.html" class="nav-link py-3 px-2" title="PROPERTY_LOSS" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-original-title="Dashboard">
+                            <img src="Property.svg" alt="Property" width="38" height="38">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="complaint.html" class="nav-link py-3 px-2" title="MY_COMPLAINT" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-original-title="MyComplaints">
+                            <img src="checklist.svg" alt="My_complaints" width="38" height="38">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="feed.html" class="nav-link py-3 px-2" title="FEEDBACK" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-original-title="FEEDBACK">
+                            <img src="feedbackicon.svg" alt="add_complaint" width="38" height="38">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="chat-bot.html" class="nav-link py-3 px-2" title="CHAT BOT" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-original-title="AddComplaint">
+                            <img src="chat-bot.svg" alt="chat bot" width="38" height="38">
+                        </a>
+                    </li>
+                    <li>
+                    <li>
+                        <a href="feed.html" class="nav-link py-3 px-2" title="LOGOUT" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-original-title="AddComplaint">
+                            <img src="logout.svg" alt="add_complaint" width="38" height="38">
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <!--end of slide bar-->
+        <div class="col-sm p-3 min-vh-100">
+            <div class="row">
+                <div class="d-flex flex-row justify-content-evenly">
+                    <button class="btn btn-primary"  onclick="showForm('property')" >PROPERTY FOUND</button>
+                    <button class="btn btn-primary" onclick="showForm('loss')">PROPERTY LOST</button>
+                </div>
+
+                <div class="d-flex flex-row justify-content-center" >
+                    <div class=" mb-4 col-12 col-sm-12 col-md-12 col-lg-8 col-xl-8 order-1">
+                        <div class=" m-5 bg-transparent">
+
+                            <!--LOSS PROPERTY-->
+                            <form class="card  shadow-lg form" id="lossForm">
+                                <label for="name1">Name of the item:
+                                    <input type="text" id="name1">
+                                </label>
+                                <br>
+                                <label for="Subject1">Place of item Lost:
+                                    <select name="Subject1" id="Subject1">
+                                        <option value="classroom">Classroom</option>
+                                        <option value="library">Library</option>
+                                        <option value="canteen">Canteen</option>
+                                        <option value="playground">Playground</option>
+                                        <option value="Center_Block">Center_Block</option>
+                                        <option value="others">Others</option>
+                                    </select>
+                                </label>
+
+                                <label for="Block_Area">Mention the Block Area:
+                                    <select name="Block_Area" id="Block_Area">
+                                        <option value="A_Block">A-Block</option>
+                                        <option value="B_Block">B-Block</option>
+                                        <option value="C_Block">C-Block</option>
+                                        <option value="D_Block">D-Block</option>
+                                        <option value="NEW_Block">NEW Block</option>
+                                    </select>
+
+                                </label>
+<br>
+                                <label for="email1">Enter Your Email:
+                                    <input type="email" id="email1" required>
+                                </label>
+
+                                <label for="description1">Description of the Item:
+                                    <textarea class="container" name="description3" id="description1" cols="60" rows="5" placeholder="Description"></textarea>
+                                </label>
+
+
+
+                                <!-- Image Upload Section -->
+                                <p class="pr-1">Please upload the images of the item:</p>
+                                <div class="upload-container">
+                                    <div class="upload-box" onclick="document.getElementById('fileInput4').click()">
+                                        <p>Front image</p>
+                                        <input type="file" id="fileInput4" accept="image/*" onchange="displayImage(this, 'image4')">
+                                        <img id="image4" src="#" alt="Image 4 Preview" style="max-width: 100%; max-height: 100px; display: none;">
+                                    </div>
+
+                                    <div class="upload-box" onclick="document.getElementById('fileInput5').click()">
+                                        <p>Back image</p>
+                                        <input type="file" id="fileInput5" accept="image/*" onchange="displayImage(this, 'image5')">
+                                        <img id="image5" src="#" alt="Image 5 Preview" style="max-width: 100%; max-height: 100px; display: none;">
+                                    </div>
+
+                                    <div class="upload-box" onclick="document.getElementById('fileInput6').click()">
+                                        <p>Side image</p>
+                                        <input type="file" id="fileInput6" accept="image/*" onchange="displayImage(this, 'image6')">
+                                        <img id="image6" src="#" alt="Image 6 Preview" style="max-width: 100%; max-height: 100px; display: none;">
+                                    </div>
+                                </div>
+
+                                <!-- End Image Upload Section -->
+
+
+
+                                <div class="d-flex mt-3 mb-2 justify-content-center">
+                                    <button type="submit" class="btn btn-primary">Submit</button>
+                                </div>
+
+
+                            </form>
+
+
+                            <form class="card shadow-lg form" id="propertyForm">
+                                <label for="name">Name of the item:
+                                    <input type="text" id="name">
+                                </label>
+                                <label for="Subject">Place of item Found:
+                                    <input type="text" id="Subject">
+                                </label>
+
+                                <label for="description">Approximate time of item found:
+                                    <input type="text" id="description">
+                                </label>
+
+
+
+
+
+                                <!-- Image Upload Section -->
+                                <p>Please upload the images of the item:</p>
+                                <div class="upload-container">
+                                    <div class="upload-box" onclick="document.getElementById('fileInput1').click()">
+                                        <p>Front image</p>
+                                        <input type="file" id="fileInput1" accept="image/*" onchange="displayImage(this, 'image1')">
+                                        <img id="image1" src="#" alt="Image 1 Preview" style="max-width: 100%; max-height: 100px; display: none;">
+                                    </div>
+
+                                    <div class="upload-box" onclick="document.getElementById('fileInput2').click()">
+                                        <p>Back image</p>
+                                        <input type="file" id="fileInput2" accept="image/*" onchange="displayImage(this, 'image2')">
+                                        <img id="image2" src="#" alt="Image 2 Preview" style="max-width: 100%; max-height: 100px; display: none;">
+                                    </div>
+
+                                    <div class="upload-box" onclick="document.getElementById('fileInput3').click()">
+                                        <p>Side image</p>
+                                        <input type="file" id="fileInput3" accept="image/*" onchange="displayImage(this, 'image3')">
+                                        <img id="image3" src="#" alt="Image 3 Preview" style="max-width: 100%; max-height: 100px; display: none;">
+                                    </div>
+                                </div>
+
+                                <!-- End Image Upload Section -->
+
+                                <div class="d-flex mb-3 mt-4 justify-content-center">
+                                    <button type="submit" class="btn btn-primary">Submit</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+
+
+                    <!--item found-->
+
+
+
+
+
+
+                    <div class="d-none d-sm-none d-md-block col-sm-4 col-md-4 col-lg-4 col-xl-4 order-2">
+                        <div class="">
+                            <img src="lost.svg" alt="PropertyLoss" width="400" height="400">
+                        </div>
+                    </div>
+                </div>
+                <!---adding the flex-->
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    function displayImage(input, imgId) {
+        var preview = document.getElementById(imgId);
+        var file = input.files[0];
+        var reader = new FileReader();
+
+        reader.onload = function (e) {
+            preview.src = e.target.result;
+            preview.style.display = 'block';
+        };
+
+        reader.readAsDataURL(file);
+    }
+    function displayImage1(input, imgId1) {
+        var preview = document.getElementById(imgId1);
+        var file = input.files[0];
+        var reader = new FileReader();
+
+        reader.onload = function (f) {
+            preview.src = f.target.result;
+            preview.style.display = 'block';
+        };
+
+        reader.readAsDataURL(file);
+    }
+
+    function showForm(formName) {
+        // Hide all forms
+        var forms = document.getElementsByClassName('form');
+        for (var i = 0; i < forms.length; i++) {
+            forms[i].style.display = 'none';
+        }
+
+        // Show the selected form
+        document.getElementById(formName + 'Form').style.display = 'block';
+    }
+</script>
+
+</body>
+</html>

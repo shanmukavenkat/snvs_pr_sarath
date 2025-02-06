@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>DASHBOARD</title>
     <link rel="stylesheet" href="Dashboard.css">
     <link rel="icon" type="image/x-icon" href="VVIT_logo.svg">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
@@ -20,13 +20,13 @@
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav ms-auto">
                 <li class="nav-item back1">
-                    <a class="nav-link " href="#">Home</a>
+                    <a class="nav-link " href="DashBoard1.html">Home</a>
                 </li>
                 <li class="nav-item back1">
-                    <a class="nav-link " href="#">Login</a>
+                    <a class="nav-link " href="Login_page.html">Login</a>
                 </li>
                 <li class="nav-item back1">
-                    <a class="nav-link " href="#">SignUp</a>
+                    <a class="nav-link " href="SignUp.html">SignUp</a>
                 </li>
                 <li class="nav-item back1">
                     <a class="nav-link " href="#">FAQ</a>
@@ -37,38 +37,39 @@
 </nav>
 <!---nav bar end-->
 <div class="container-fluid">
-    <div class="row">
+    <div class="row" >
         <div class=" bg-transparent  col-sm-auto bg-light sticky-top">
             <div class="d-flex flex-sm-column flex-row flex-nowrap bg-light align-items-center sticky-top">
 
                 <ul class="  bg-transparent nav nav-pills nav-flush flex-sm-column flex-row flex-nowrap mb-auto mx-auto text-center align-items-center">
                     <li class="nav-item">
-                        <a href="#" class="nav-link py-3 px-2" title="DASHBOARD" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-original-title="Home">
+                        <a href="DashBoard1.html" class="nav-link py-3 px-2" title="DASHBOARD" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-original-title="Home">
                             <img src="Dashboard_svg.svg" alt="Dashboard" width="30" height="24">
                         </a>
                     </li>
                     <li>
-                        <a href="#" class="nav-link py-3 px-2" title="PROPERTY_LOSS" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-original-title="Dashboard">
+                        <a href="PropertyLoss.html" class="nav-link py-3 px-2" title="PROPERTY_LOSS" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-original-title="Dashboard">
                             <img src="Property.svg" alt="Property" width="38" height="38">
                         </a>
                     </li>
                     <li>
-                        <a href="#" class="nav-link py-3 px-2" title="MY_COMPLAINT" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-original-title="MyComplaints">
+                        <a href="complaint.html" class="nav-link py-3 px-2" title="MY_COMPLAINT" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-original-title="MyComplaints">
                            <img src="checklist.svg" alt="My_complaints" width="38" height="38">
                         </a>
                     </li>
+
                     <li>
-                        <a href="#" class="nav-link py-3 px-2" title="CONTACT_US" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-original-title="Contact">
-                            <img src="contact_svg.svg" alt="contactus" width="38" height="38">
+                        <a href="feed.html" class="nav-link py-3 px-2" title="FEEDBACK" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-original-title="FEEDBACK">
+                            <img src="feedbackicon.svg" alt="add_complaint" width="38" height="38">
                         </a>
                     </li>
                     <li>
-                        <a href="#" class="nav-link py-3 px-2" title="COMPLAINT_REGISTRATION" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-original-title="AddComplaint">
-                            <img src="add-file.svg" alt="add_complaint" width="38" height="38">
+                        <a href="chat-bot.html" class="nav-link py-3 px-2" title="CHAT BOT" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-original-title="AddComplaint">
+                            <img src="chat-bot.svg" alt="chat bot" width="38" height="38">
                         </a>
                     </li>
                     <li>
-                        <a href="#" class="nav-link py-3 px-2" title="LOGOUT" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-original-title="AddComplaint">
+                        <a href="feed.html" class="nav-link py-3 px-2" title="LOGOUT" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-original-title="AddComplaint">
                             <img src="logout.svg" alt="add_complaint" width="38" height="38">
                         </a>
                     </li>
@@ -81,8 +82,8 @@
             <div class="container-fluid">
             <div class="row bg-transparent ">
             <div class=" bg-transparent d-flex flex-row justify-content-between">
-            <div class="card bg-transparent col-lg-8  ">
-                <div class="card bg-transparent d-flex flex-row justify-content-center">
+            <div class="card bg-transparent col-12 col-sm-12 col-md-8 col-lg-8 col-xl-8 ">
+                <div class="card bg-transparent d-flex flex-row justify-content-center ">
                 <div class="para">
                     <h4> Hi,<strong id="studentName">StudentName </strong>&#x1F44B;<br></h4>
                     <ul>
@@ -97,24 +98,59 @@
 
                     </div>
                 </div>
-                <p>Recent Complaint History</p>
-                <div class="card1  ">
-                    <ul>
-                    <p>the complaint will be updated here</p>
-                        <p>the complaint will be updated here</p>
-                        <p>the complaint will be updated here</p>
-                        <p>the complaint will be updated here</p>
-                        <p>the complaint will be updated here</p>
-                        <p>the complaint will be updated here</p>
-                        <p>the complaint will be updated here</p>
-                        <p>the complaint will be updated here</p>
-                        <p>the complaint will be updated here</p>
 
-                    </ul>
+                <div class="card1 mt-2 ">
+
+                    <mark class="mark btn-primary m-2" style="background-color: #0d6efd; color:#ffffff; font-weight:bold; font-family: Calibri,sans-serif">Status</mark>
+                    <p class="m-2">the Query by the user that he initialized</p>
+
+                    <table class="table table-bordered">
+                        <thead>
+                        <tr>
+                            <th>Query</th>
+                            <th>Status</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <!-- Query 1 -->
+                        <tr>
+                            <td>QUERY1</td>
+                            <td>
+                                <div class="progress">
+                                    <div class="progress-bar bg-success" role="progressbar" style="width: 25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">Initialized</div>
+                                </div>
+                            </td>
+                        </tr>
+
+                        <!-- Query 2 -->
+                        <tr>
+                            <td>QUERY2</td>
+                            <td>
+                                <div class="progress">
+                                    <div class="progress-bar bg-warning" role="progressbar" style="width: 50%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">Pending</div>
+                                </div>
+                            </td>
+                        </tr>
+
+                        <!-- Query 3 -->
+                        <tr>
+                            <td>QUERY3</td>
+                            <td>
+                                <div class="progress">
+                                    <div class="progress-bar bg-danger" role="progressbar" style="width: 75%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">Completed</div>
+                                </div>
+                            </td>
+                        </tr>
+                        </tbody>
+                    </table>
+
                 </div>
             </div>
-                <div class=" col-lg-4 ">
+                <!-- End of col-sm-8 -->
+
+
                 <div class="row pb-5 m-2 w-80">
+                    <div class="d-none d-sm-none d-md-inline d-lg-block d-xl-block  col-lg-12 col-xl-12 ">
                             <div class="card bg-transparent shadow-sm ">
                                 <div class="card-header  text-center">
 
@@ -127,26 +163,22 @@
 
                                 </div>
                                 <div class="card-body">
-                                    <form class="forms">
-                                        <label for="name">NAME
-                                        <input type="text" id="name">
-                                        </label>
-                                        <label for="rollno">Roll NO
-                                        <input type="text" id="rollno">
-                                        </label>
-                                        <label for="branch">Branch
-                                        <input type="text" id="branch">
-                                        </label>
-                                        <label for="year">Year
-                                        <input type="number" id="year">
-                                        </label>
-                                        <p>No of complaints:</p>
-                                        <p>Complaints solved:</p>
-                                    </form>
+                                    <div class="row">
+                                        <div class="col-sm-12">
+                                            <h4 class="mb-0">StudentName</h4>
+                                            <p class="text-secondary">StudentName</p>
+                                            <p class="text-secondary">Email</p>
+                                            <p class="text-secondary">Department</p>
+                                            <p class="text-secondary">Year</p>
+                                            <p class="text-secondary">Section</p>
+                                            <p class="text-secondary">RollNo</p>
+
+                                        </div>
+
+                                </div>
                                     <button class="btn btn-primary" onclick="saveButton()">save</button>
 
                                 </div>
-                            </div>
 
                 </div>
                 </div>
@@ -172,5 +204,6 @@
 
 </script>
 
+</div>
 </body>
 </html>

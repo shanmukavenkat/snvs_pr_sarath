@@ -1,0 +1,10 @@
+{
+  "dependencies": {
+    "css-doodle": "^0.38.0",
+    "mdb-ui-kit": "^7.1.0",
+    "pattern.css": "^1.0.0"
+  },
+  "devDependencies": {
+    "tailwindcss": "^3.4.0"
+  }
+}

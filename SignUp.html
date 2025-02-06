@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Signup</title>
+    <link rel="icon" type="image/x-icon" href="VVIT_logo.svg">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="Signup.css">
+
+
+
+</head>
+<body>
+<!---nav bar-->
+<nav class="navbar bg-transparent navbar-expand-lg navbar-light bg-light">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="#"><img src="VVIT_logo.svg" alt="logo" width="50%"> </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item">
+                    <a class="nav-link back1" href="Login_page.html">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link back1" href="Login_page.html">Login</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link back1" href="SignUp.html">SignUp</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link back1" href="chat-bot.html">FAQ</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+<div class="container">
+    <div class="row">
+        <div class="d-flex flex-row justify-content-center">
+
+        <div class=" col-7">
+            <div class="card  shadow-lg">
+                <!--form tag created-->
+                <div class="d-flex flex-column justify-content-center p-3">
+                <h1 class="text-center text-3xl ">SignUp</h1>
+                <form>
+                    <!--Name-->
+                    <div class="form-floating mb-3 m-2 w-40">
+                        <input type="text" class="form-control input_class" id="floatingInput1" placeholder="name">
+                        <label for="floatingInput1">Name</label>
+                    </div>
+                   <!--last name-->
+                    <div class="form-floating mb-3 m-2 w-40">
+                        <input type="text" class="form-control input_class" id="floatingInput2" placeholder="lastname">
+                        <label for="floatingInput2">Last Name</label>
+                    </div>
+                    <!--user name-->
+                    <div class="form-floating mb-3 m-2 w-40">
+                        <input type="text" class="form-control input_class" id="floatingInput3" placeholder="username">
+                        <label for="floatingInput3">User Name</label>
+                    </div>
+                    <!--gender-->
+                    <div class="form-floating mb-3 m-2 w-40">
+                        <input type="text" class="form-control input_class" id="floatingInput9" placeholder="username">
+                        <label for="floatingInput9">Gender</label>
+                    </div>
+                    <!--email-->
+                    <div class="form-floating mb-3 m-2 w-40">
+                        <input type="email" class="form-control input_class" id="floatingInput4" placeholder="Email">
+                        <label for="floatingInput4">Email</label>
+                    </div>
+                 <!--RollNo-->
+                    <div class="form-floating mb-3 m-2 w-40">
+                        <input type="text" class="form-control input_class" id="floatingInput5" placeholder="RollNo">
+                        <label for="floatingInput5">RollNo</label>
+                    </div>
+                    <!--Branch-->
+                    <div class="form-floating mb-3 m-2 w-40">
+                        <input type="text" class="form-control input_class" id="floatingInput8" placeholder="Branch">
+                        <label for="floatingInput8">Branch</label>
+                    </div>
+                    <!--password-->
+                    <div class="form-floating mb-3 m-2 w-40">
+                        <input type="password" class="form-control input_class" id="floatingInput6" placeholder="Password">
+                        <label for="floatingInput6">Password</label>
+                    </div>
+                    <!--confirm password-->
+                    <div class="form-floating mb-3 m-2 w-40">
+                        <input type="password" class="form-control input_class" id="floatingInput7" placeholder="Confirm Password">
+                        <label for="floatingInput7">Confirm Password</label>
+                    </div>
+                    <!--submit button-->
+                    <p>If you are a member?<a a href="Login_page.html">Login</a></p>
+                    <div class="d-flex flex-row justify-content-center">
+                    <button type="button" class="btn mt-3 btn-primary" data-mdb-ripple-init>Create Account</button>
+                    </div>
+
+                </form>
+                </div>
+           </div>
+        </div>
+
+       <div class="d-none d-sm-none d-md-block d-xl-block d-lg-block col-5 col-lg-5">
+            <div class="card1">
+                <img src="SignUp.svg" alt="Reload" class="library"/>
+            </div>
+        </div>
+        </div>
+
+    </div>
+</div>
+<script>
+    // Initialization for ES Users
+    import { Input, initMDB } from "mdb-ui-kit";
+
+    initMDB({ Input });
+</script>
+</body>
+</html>

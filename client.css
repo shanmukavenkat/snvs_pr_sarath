@@ -1,0 +1,11 @@
+.login_details{
+    background-color: #c5c5c5;
+    width: 100%;
+    text-align: right;
+}
+body{
+   background-image: -webkit-gradient(linear, 100% 100%, 100% 100%, from(#f5f5f5), to(#eeeeee));
+}
+.icon{
+
+}

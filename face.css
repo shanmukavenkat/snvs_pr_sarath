@@ -1,0 +1,153 @@
+@import url('https://fonts.googleapis.com/css?family=Exo:100');
+
+body {
+    font-family: 'Exo', sans-serif;
+    background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAIAAACRXR/mAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAIGNIUk0AAHolAACAgwAA+f8AAIDpAAB1MAAA6mAAADqYAAAXb5JfxUYAAABnSURBVHja7M5RDYAwDEXRDgmvEocnlrQS2SwUFST9uEfBGWs9c97nbGtDcquqiKhOImLs/UpuzVzWEi1atGjRokWLFi1atGjRokWLFi1atGjRokWLFi1af7Ukz8xWp8z8AAAA//8DAJ4LoEAAlL1nAAAAAElFTkSuQmCC") repeat 0 0;
+    animation: bg-scrolling-reverse 0.92s infinite linear;
+}
+
+nav {
+    width: 250px;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #F6FBFF;
+    font-family: "Poppins", sans-serif;
+    z-index: 1000;
+    transition: transform 0.3s ease;
+}
+
+.nav-links {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: flex-start;
+    padding-left: 20px;
+}
+
+.nav-links li {
+    list-style: none;
+    margin: 15px 0;
+}
+
+.nav-links a {
+    color: black;
+    text-decoration: none;
+    letter-spacing: 3px;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.burger {
+    display: none;
+    cursor: pointer;
+    margin-left: auto;
+}
+
+.burger div {
+    width: 25px;
+    height: 3px;
+    background-color: black;
+    margin: 5px;
+    transition: all 0.3s ease;
+}
+
+.nav-active {
+    transform: translateX(0%);
+}
+
+@keyframes navLinkFade {
+    from {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.toggle .line1 {
+    transform: rotate(-45deg) translate(-5px, 6px);
+}
+
+.toggle .line2 {
+    opacity: 0;
+}
+
+.toggle .line3 {
+    transform: rotate(45deg) translate(-5px, -6px);
+}
+
+.logo {
+    width: 50%;
+}
+
+.card {
+    background-color: #F6FBFF;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+#result {
+    display: flex;
+    gap: 10px;
+    padding: 10px;
+    height: 200px;
+    overflow: hidden;
+}
+
+.thumbnails {
+    max-width: 100%;
+    max-height: 100%;
+    height: auto;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    justify-content: center;
+}
+
+label {
+    margin: 10px;
+}
+
+input {
+    background-color: transparent;
+    border: none;
+    outline: none;
+    width: 40%;
+}
+
+#imagefile {
+    cursor: pointer;
+    color: white;
+    padding: 10px;
+    border: none;
+    background-color: #FF725E;
+    border-radius: 5px;
+}
+
+#imagefile::file-selector-button {
+    color: white;
+    background-color: #FF725E;
+}
+
+.icon {
+    width: 24px;
+}
+
+#video-container {
+    text-align: center;
+}
+
+video {
+    border: 1px solid #ccc;
+    border-radius: 8px;
+}
+

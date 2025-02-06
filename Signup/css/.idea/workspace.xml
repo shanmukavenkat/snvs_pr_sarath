@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="ece18e05-8d55-4f0a-851c-79c24cdc177e" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/../../DASHBOARD/Login-pan.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Forms.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Forms.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Login-pan.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Login.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Login_page.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../PropertyLoss.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../PropertyLoss.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../SignUp.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Signup.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../contact_us.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../contact_us.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../form.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../image1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../image2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../lost.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../package-lock.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../package.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../snvs_sarath/firstpage.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DASHBOARD/CSS/Login.css" beforeDir="false" afterPath="$PROJECT_DIR$/../../DASHBOARD/Login.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DASHBOARD/DashBoard1.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../DASHBOARD/DashBoard1.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DASHBOARD/Dashboard.css" beforeDir="false" afterPath="$PROJECT_DIR$/../../DASHBOARD/Dashboard.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DASHBOARD/HTML/Login_page.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../DASHBOARD/Login_page.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DASHBOARD/PropertyLoss.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../DASHBOARD/PropertyLoss.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../index.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../index.html" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "associatedIndex": 8
+}]]></component>
+  <component name="ProjectId" id="2aWpksoznOeV7HVdIT6QDDA9cdv" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "git-widget-placeholder": "main",
+    "last_opened_file_path": "D:/snvs_pr_sarath/Signup/css",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="ece18e05-8d55-4f0a-851c-79c24cdc177e" name="Changes" comment="" />
+      <created>1704444335644</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1704444335644</updated>
+      <workItem from="1704444336711" duration="4000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>

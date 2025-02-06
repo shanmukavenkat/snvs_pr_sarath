@@ -1,0 +1,33 @@
+.bg-container{
+    background-color: whitesmoke;
+    height: 100vh;
+    width: 100vw;
+    background-size: cover;
+}
+.head{
+    color: black;
+    font-size: 30px;
+    font-weight: 500;
+    font-family: "Roboto";
+    text-align: center;
+}
+.head1{
+    color:black;
+    font-weight: normal;
+    font-size: medium;
+}
+.img{
+    height: 105%;
+    width: 60%;
+    background-size: cover;
+}
+.button{
+    background-color: rgb(250, 223, 183);
+    height: 35px;
+    width: 75px;
+    background-size: cover;
+    border-radius: 15px;
+    border-width: 0px;
+    font-size: 15px;
+    
+}
